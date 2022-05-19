@@ -1,28 +1,16 @@
 package src;
-import java.util.Scanner;
+
 public class Main {
-
+    
+    
     public static void main(String[] args) {
-        String question = "What is 2 + 2?";
-        String choiceOne = "2";
-        String choiceTwo = "4";
-        String choiceThree = "idk";
-
-        String correctAnswer = choiceTwo;
-
-        System.out.println(question);
-        System.out.println(choiceOne);
-        System.out.println(choiceTwo);
-        System.out.println(choiceThree);
-
-        Scanner input = new Scanner(System.in);
-        System.out.println("What is your answer?");
-        String userInput = input.next();
-
-        if (correctAnswer.equals(userInput)) {
-            System.out.println("You are correct");
-        } else {
-            System.out.println("Wrong answer");
-        }
+        Triangle triangleA = new Triangle(15, 8, 15, 8, 17);
+        Triangle triangleB = new Triangle(3, 2.598, 3, 3, 3);
+    
+        double triangleAArea = triangleA.findArea();
+        System.out.println(triangleAArea);
+        double triangleBArea = triangleB.findArea();
+        System.out.println(triangleBArea);
+        System.out.println(Triangle.numOfSides);
     }
 }
